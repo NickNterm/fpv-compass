@@ -1,0 +1,64 @@
+# ===== Secrets / env =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ===== Python / Django =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== Node / Next.js =====
+node_modules/
+.next/
+out/
+.turbo/
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ===== Docker / DB volumes =====
+postgres_data/
+*.sql.gz
+*.dump
+
+# ===== Editor / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ===== Build / misc =====
+*.log
+coverage/
+.cache/
+
+# ===== Project-specific heavy assets (not worth uploading) =====
+tiktok-assets/
+marketing/*.mp4
+*.mp4
+*.mp3
+*.wav
+piper_models/
+
+# Claude Code
+.claude/
+graphify-out/

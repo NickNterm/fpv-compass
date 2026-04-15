@@ -1,0 +1,1422 @@
+{
+  "sources": [
+    "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary",
+    "https://wrekd.com/pages/a-master-list-of-fpv-tricks-and-manuevers-and-how-to-do-them",
+    "https://prowhooper.com/tricktionary/",
+    "https://rchobbylab.com/fpv-drone-freestyle-tricks/",
+    "https://www.mepsking.shop/blog/fpv-freestyle-tricks-tutorial.html",
+    "https://www.droneblog.com/fpv-acro-freestyle/",
+    "https://fpvfrenzy.com/lessons-in-flow/"
+  ],
+  "phases": [
+    {
+      "name": "Foundations",
+      "order": 1,
+      "description": "Essential flight skills every freestyle pilot needs before attempting tricks. Master these in a simulator first."
+    },
+    {
+      "name": "Basic Tricks",
+      "order": 2,
+      "description": "Your first real freestyle maneuvers. These form the building blocks for everything else."
+    },
+    {
+      "name": "Intermediate",
+      "order": 3,
+      "description": "Multi-axis moves, inversions, and proximity flying. Requires solid foundations."
+    },
+    {
+      "name": "Advanced",
+      "order": 4,
+      "description": "Complex multi-axis combos, advanced proximity, and style moves."
+    },
+    {
+      "name": "Expert",
+      "order": 5,
+      "description": "Pro-level tricks that combine multiple advanced techniques into fluid sequences."
+    }
+  ],
+  "tricks": [
+    {
+      "name": "Hover Control",
+      "description": "Hold position and heading in Acro mode without stabilization. The most fundamental skill — if you can't hover, you can't do anything else.",
+      "difficulty": 1,
+      "phase": "Foundations",
+      "pro_tip": "Start in Acro mode from day one. Use a sim like VelociDrone or Liftoff. Practice holding a fixed point for 30 seconds without drifting.",
+      "prerequisites": [],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "How-to Fly FPV Quadcopter/Drone // Beginner: Lesson 1 // Hovering",
+          "channel": "FPV Academy / Powered by GetFPV",
+          "url": "https://www.youtube.com/watch?v=TX0S6OOsc-8",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Throttle Management",
+      "description": "Smooth altitude control and coordinated throttle during turns and maneuvers. Prevents the jerky up-down motion that ruins flow.",
+      "difficulty": 1,
+      "phase": "Foundations",
+      "pro_tip": "Practice figure-8 patterns at constant altitude. Your throttle thumb should barely move. Smooth is fast.",
+      "prerequisites": [
+        "Hover Control"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "RACING TIPS! THROTTLE CONTROL!",
+          "channel": "Liftoff Insider",
+          "url": "https://www.youtube.com/watch?v=F3Z31gjof9w",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Flip",
+      "description": "A 360-degree rotation on the pitch axis — either forward (front flip) or backward (backflip). Push throttle up while pitching, release when inverted, throttle back up on recovery.",
+      "difficulty": 2,
+      "phase": "Foundations",
+      "pro_tip": "Full stick deflection, then immediately center. Don't hold the stick — flick it. Start high with plenty of altitude.",
+      "prerequisites": [
+        "Hover Control"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "How To: Flips | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=YPjSWXFgHEQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Roll",
+      "description": "A 360-degree rotation on the roll axis. Also called an aileron roll. Push the roll stick fully left or right, center when complete.",
+      "difficulty": 2,
+      "phase": "Foundations",
+      "pro_tip": "Rolls lose less altitude than flips. Add a tiny bit of throttle as you go inverted to maintain height.",
+      "prerequisites": [
+        "Hover Control"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "Your First FPV Trick | Aileron Roll",
+          "channel": "AW",
+          "url": "https://www.youtube.com/watch?v=QK_2QyXtT7E",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Yaw Spin",
+      "description": "Rapid rotation around the yaw axis while maintaining forward flight. Combine roll and yaw in the same direction for a flat spin effect.",
+      "difficulty": 3,
+      "phase": "Foundations",
+      "pro_tip": "Coordinate roll and yaw inputs together. The drone should spin flat, not tilting up or down. Practice in open air first.",
+      "prerequisites": [
+        "Throttle Management",
+        "Roll"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "How To: Basic vs. Coordinated Flat Yaw Spins | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=OyZ1iHYVsmQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Flying Through Gaps",
+      "description": "Accurately fly through openings between trees, poles, buildings, and structures. Teaches precise line control and spatial awareness.",
+      "difficulty": 3,
+      "phase": "Foundations",
+      "pro_tip": "Start with big gaps and gradually go smaller. Look through the gap, not at it. Your drone goes where your eyes go.",
+      "prerequisites": [
+        "Throttle Management"
+      ],
+      "tags": [
+        "basics",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "Hitting Gaps Tutorial - How to FPV ep. 4",
+          "channel": "Timmy RC",
+          "url": "https://www.youtube.com/watch?v=c3Rn9CFRdZs",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Power Loop",
+      "description": "Fly toward an object, punch up, pitch back to loop over it vertically, and dive down the other side. The bread and butter of freestyle.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Start in the sim. Practice over a single tree in VelociDrone until you can hit 10 in a row. Throttle hard on the way up, cut on the way over, throttle again on the way down.",
+      "prerequisites": [
+        "Flip",
+        "Throttle Management"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To Powerloop an FPV Drone For Beginner and Advanced Pilots",
+          "channel": "FPV Academy / Powered by GetFPV",
+          "url": "https://www.youtube.com/watch?v=LTl0780qgCE",
+          "duration": 0
+        },
+        {
+          "title": "Powerloop Tutorial",
+          "channel": "RetryWin",
+          "url": "https://youtu.be/PN2lquSUWdk",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Split-S",
+      "description": "Half roll to inverted, then pull back on pitch to dive and reverse direction. Creates an S-shaped flight path. The go-to move for quick direction changes.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Make sure you have enough altitude before starting. Roll inverted first, pause for a beat, then pull pitch. Don't rush the two inputs together.",
+      "prerequisites": [
+        "Roll",
+        "Throttle Management"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "Learn to Fly an FPV Drone - Lesson 10 - Flips and Split-S",
+          "channel": "Joshua Bardwell",
+          "url": "https://www.youtube.com/watch?v=pL7sj1h3SRs",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Barrel Roll",
+      "description": "A full 360-degree roll while simultaneously maintaining forward flight and a slight climbing arc. Unlike a flat roll, you travel in a corkscrew path.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "Combine forward pitch with roll input. Keep a bit of throttle throughout. The key difference from a flat roll is that you're always moving forward.",
+      "prerequisites": [
+        "Roll",
+        "Throttle Management"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "Learning FPV Drone Flight - Barrel Rolls",
+          "channel": "Automation Insider",
+          "url": "https://www.youtube.com/watch?v=spk5MGCV5dQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Matty Flip",
+      "description": "Fly forward, pitch back past inverted, and dive backwards away from an object. Named after Matty Stuntz. It's like a reverse power loop — you start at the top and go down and backward.",
+      "difficulty": 5,
+      "phase": "Basic Tricks",
+      "pro_tip": "Start HIGH. You need altitude because you'll drop during the transition. Throttle up as you go inverted to maintain energy.",
+      "prerequisites": [
+        "Flip",
+        "Throttle Management",
+        "Power Loop"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To: Matty Flip | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=mZVjPSQHm9Y",
+          "duration": 0
+        },
+        {
+          "title": "Mattyflip with MattyStuntz - Trick Series",
+          "channel": "Rotor Riot",
+          "url": "https://www.youtube.com/watch?v=Twcj_8k_-vk",
+          "duration": 0
+        },
+        {
+          "title": "Matty Flip Tutorial",
+          "channel": "balzaccc",
+          "url": "https://youtu.be/JoZePbJpe_c",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Orbit",
+      "description": "Fly in a circle around an object while keeping the camera pointed at it. Combine roll, yaw, and throttle to maintain a constant radius around a tree or pole.",
+      "difficulty": 5,
+      "phase": "Basic Tricks",
+      "pro_tip": "Pick a single tree. Roll slightly toward it, yaw away from it, and add pitch to maintain speed. Tighter orbits need more roll angle.",
+      "prerequisites": [
+        "Yaw Spin",
+        "Throttle Management"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To: Orbits | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=XJDBezfCwyY",
+          "duration": 0
+        },
+        {
+          "title": "Orbits Tutorial",
+          "channel": "DanCarpyFPV",
+          "url": "https://youtu.be/Xj1V70nmeEw",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Juicy Flick",
+      "description": "A quick, aggressive snap to look back behind you, then immediately recover forward. Flick the pitch back hard, catch a quick inverted glimpse, then snap back to forward flight.",
+      "difficulty": 5,
+      "phase": "Basic Tricks",
+      "pro_tip": "It's all about timing. The flick should be fast and snappy — in and out in under a second. Practice the timing before adding proximity.",
+      "prerequisites": [
+        "Flip",
+        "Throttle Management"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To Juicy Flick an FPV Drone For Beginner and Advanced Pilots",
+          "channel": "FPV Academy / Powered by GetFPV",
+          "url": "https://www.youtube.com/watch?v=tbem8fUPPxU",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Dive",
+      "description": "Free-fall controllably from height with the camera angled straight down at ~90 degrees. Cut throttle and point the nose down for maximum speed.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "Make sure you have a safe pull-out altitude planned before you start. Power dives look best when you pull out close to the ground with a smooth arc.",
+      "prerequisites": [
+        "Throttle Management"
+      ],
+      "tags": [
+        "basics"
+      ],
+      "videos": [
+        {
+          "title": "Tips for Diving an FPV Drone from Bardwell",
+          "channel": "Joshua Bardwell Livestream Clips",
+          "url": "https://www.youtube.com/watch?v=LyaR1eYkNfY",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Stall Turn",
+      "description": "Punch straight up, cut throttle to stall and float momentarily, then fall and recover. The mid-air pause creates a dramatic visual effect.",
+      "difficulty": 5,
+      "phase": "Intermediate",
+      "pro_tip": "Gain altitude fast, cut throttle, and immediately do a half flip. If you time it right, you'll still be rising while inverted — a beautiful weightless pause.",
+      "prerequisites": [
+        "Flip",
+        "Throttle Management"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To Turn (Properly & Smoothly) | FPV Trick Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=lyo5ffYpOIE",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Inverted Hover",
+      "description": "Flip to inverted position and maintain a steady hover using negative pitch and throttle adjustments. A fundamental skill for many advanced tricks.",
+      "difficulty": 5,
+      "phase": "Intermediate",
+      "pro_tip": "Push the pitch stick forward (which is 'up' when inverted) to maintain altitude. Small corrections only — overcorrecting is the #1 mistake.",
+      "prerequisites": [
+        "Hover Control",
+        "Flip"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To Fly Upside Down in FPV - Inverted Orbit Tutorial",
+          "channel": "SkySharkFPV",
+          "url": "https://www.youtube.com/watch?v=8S6Q_hgtPkk",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Knife Edge",
+      "description": "Roll the drone 90 degrees sideways and fly through a gap or along a surface. Requires constant yaw input to maintain direction since you've lost normal pitch authority.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "You need to yaw in the direction you were pitching. Practice the transition into knife edge smoothly — the entry is harder than holding it.",
+      "prerequisites": [
+        "Roll",
+        "Flying Through Gaps"
+      ],
+      "tags": [
+        "intermediate",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "How To: Knife Edge | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=FamqCNGrq2M",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Inverted Yaw Spin",
+      "description": "Fly inverted while spinning on the yaw axis. Combine inverted flight with a yaw rotation for a disorienting but impressive move.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "Master inverted hover first. Then add yaw gradually. Push forward on pitch (negative pitch when inverted) to maintain altitude throughout the spin.",
+      "prerequisites": [
+        "Inverted Hover",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "FPV Trick Tutorial | INVERTED YAW SPIN",
+          "channel": "Patrick Watkins",
+          "url": "https://www.youtube.com/watch?v=02x7HyC2U1E",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Trippy Spin",
+      "description": "Continuous forward roll while flying in a straight line, creating a corkscrew effect through the air. Also called an inverted orbit when done around an object.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "Constant roll input plus slight forward pitch. The key is a smooth, consistent roll rate — don't speed up or slow down mid-spin.",
+      "prerequisites": [
+        "Roll",
+        "Barrel Roll"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "How to Trippy Spin like a Pro in 7 minutes! - FPV Tutorials",
+          "channel": "RDubzFPV",
+          "url": "https://www.youtube.com/watch?v=ysb5miD3ZdU",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Rewind",
+      "description": "Execute a motion (like entering a power loop) and immediately reverse it through the same arc before completing it. Like pressing rewind on your flight.",
+      "difficulty": 7,
+      "phase": "Intermediate",
+      "pro_tip": "Start with power loop rewinds — go halfway up the loop, then reverse back down. The timing of the reversal is everything.",
+      "prerequisites": [
+        "Power Loop",
+        "Stall Turn"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "Rewinds Tips and Tricks Tutorial || FPV FREESTYLE ||",
+          "channel": "Roii FPV",
+          "url": "https://www.youtube.com/watch?v=EgcS8U65h_0",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Wall Ride",
+      "description": "Skim along a vertical wall surface, keeping the drone parallel and close to the wall. Requires tilting the drone toward the wall and using throttle to counteract gravity.",
+      "difficulty": 7,
+      "phase": "Intermediate",
+      "pro_tip": "Start with large, flat walls and keep some distance. Get closer gradually over sessions. Always have an escape route planned.",
+      "prerequisites": [
+        "Knife Edge",
+        "Flying Through Gaps"
+      ],
+      "tags": [
+        "advanced",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "How To Wall Ride A Building | FPV Trick Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=JJ9W8wpwsxA",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Wall Tap",
+      "description": "Approach a wall at reduced speed and briefly touch the drone's bottom to the surface before recovering. A proximity move that looks dramatic on camera.",
+      "difficulty": 7,
+      "phase": "Intermediate",
+      "pro_tip": "Approach slowly and cut throttle just before contact. The props should barely touch. Practice on soft surfaces like grass walls first.",
+      "prerequisites": [
+        "Wall Ride"
+      ],
+      "tags": [
+        "advanced",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "How Do You Wall Tap? (Whooptorial Wednesday)",
+          "channel": "Infinity Loops",
+          "url": "https://www.youtube.com/watch?v=HrdGUkxmAQE",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Madd Flip",
+      "description": "A disorienting multi-axis maneuver combining roll, pitch, and yaw mid-flip. Start a flip, then add a yaw spin partway through for a sharp directional change.",
+      "difficulty": 7,
+      "phase": "Advanced",
+      "pro_tip": "Start by doing a slow flip and adding just a tiny bit of yaw partway through. Gradually increase the yaw input as you get comfortable with the disorientation.",
+      "prerequisites": [
+        "Flip",
+        "Yaw Spin",
+        "Inverted Yaw Spin"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "How To: Flips | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=YPjSWXFgHEQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Rubik's Cube",
+      "description": "Multi-axis rotation combining half-flips and half-rolls in sequence — half flip forward, full roll, half flip forward again. Creates a cube-like tumbling motion.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "Break it down: half flip, pause, full roll, pause, half flip. Practice each transition separately before chaining them. Speed comes with muscle memory.",
+      "prerequisites": [
+        "Inverted Yaw Spin",
+        "Trippy Spin"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "How to Rubik's Cube - FPV Trick List",
+          "channel": "Jeff Rhatigan",
+          "url": "https://www.youtube.com/watch?v=iLUvCOee4Es",
+          "duration": 0
+        },
+        {
+          "title": "Rubik's Cube Tutorial",
+          "channel": "Fireblast FPV",
+          "url": "https://youtu.be/BUFIDrf_3XQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Sbang",
+      "description": "A fast, aggressive combo move: boost forward, split-s over an object, and immediately juicy flick out. The quintessential 'banger' move in modern freestyle.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The three parts flow together: boost (throttle punch forward), split-s (roll inverted + pull), juicy flick (snap look-back). Practice each part, then chain them.",
+      "prerequisites": [
+        "Split-S",
+        "Juicy Flick",
+        "Power Loop"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "How To: Sbang Ultimate Combo | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=CK4AQszHHfI",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Proximity Power Loop",
+      "description": "A power loop executed very close to a structure — threading through tight spaces at the top of the loop. The building-block for bando flying.",
+      "difficulty": 7,
+      "phase": "Advanced",
+      "pro_tip": "Start with wide power loops around big objects, then gradually tighten the radius and get closer. Walk the location first.",
+      "prerequisites": [
+        "Power Loop",
+        "Flying Through Gaps"
+      ],
+      "tags": [
+        "advanced",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "FPV Freestyle Trick Series: How To - Proximity Power Loops",
+          "channel": "Phantom",
+          "url": "https://www.youtube.com/watch?v=zfhcBwVs_gE",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Tornado",
+      "description": "A continuous multi-axis spin combining yaw, roll, and pitch simultaneously. The drone tumbles through the air in a chaotic but controlled pattern.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "Start with just two axes at a time (yaw+roll, then yaw+pitch). Only add the third axis when the two-axis version feels natural.",
+      "prerequisites": [
+        "Madd Flip",
+        "Rubik's Cube"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "How To: Sbang Tornado | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=BQauW42gMfE",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Helix",
+      "description": "Spiral upward or downward around a tall object (tower, tree, building) while maintaining a constant orbit radius. Like a vertical corkscrew around a pole.",
+      "difficulty": 7,
+      "phase": "Advanced",
+      "pro_tip": "Start with a comfortable orbit, then slowly add throttle to climb (or cut to descend). Keep the radius constant — that's the hard part.",
+      "prerequisites": [
+        "Orbit",
+        "Trippy Spin"
+      ],
+      "tags": [
+        "advanced",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "How To Do FPV Orbits (as made famous by Mr. Steele)",
+          "channel": "Joshua Bardwell",
+          "url": "https://www.youtube.com/watch?v=qycbKimdr_I",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Reverse Split-S",
+      "description": "The opposite of a split-s: fly forward, pull up into a half loop, then roll upright at the top. You end up going the opposite direction at a higher altitude.",
+      "difficulty": 5,
+      "phase": "Intermediate",
+      "pro_tip": "Full throttle on the way up, then ease off as you roll out at the top. It's basically an Immelmann turn from aviation.",
+      "prerequisites": [
+        "Split-S"
+      ],
+      "tags": [
+        "intermediate"
+      ],
+      "videos": [
+        {
+          "title": "How To: Half Matty Flip / Reverse Split-S | FPV Tutorial",
+          "channel": "headmazta",
+          "url": "https://www.youtube.com/watch?v=yyvGYJBwvcA",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Combo Freestyle",
+      "description": "Chain multiple tricks together into fluid sequences without pausing. The goal is flow — each trick transitions smoothly into the next.",
+      "difficulty": 9,
+      "phase": "Expert",
+      "pro_tip": "Practice 2-trick combos first (power loop into split-s, matty flip into trippy spin). Build up to 3-4 trick chains. Flow is about matching exit speed/angle to the next trick's entry.",
+      "prerequisites": [
+        "Sbang",
+        "Rubik's Cube",
+        "Proximity Power Loop"
+      ],
+      "tags": [
+        "advanced"
+      ],
+      "videos": [
+        {
+          "title": "Fpv Freestyle - 14 TRICKS IN 10 min",
+          "channel": "BARD",
+          "url": "https://www.youtube.com/watch?v=H0kxJqmjbgE",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Bando Ripping",
+      "description": "Aggressive freestyle through abandoned buildings, combining tight gaps, proximity power loops, wall rides, and quick direction changes in complex structures.",
+      "difficulty": 9,
+      "phase": "Expert",
+      "pro_tip": "Walk the location first. Know your exits. Start slow and increase speed only after you know the lines. Always have an escape plan for every gap.",
+      "prerequisites": [
+        "Proximity Power Loop",
+        "Wall Ride",
+        "Knife Edge"
+      ],
+      "tags": [
+        "advanced",
+        "proximity"
+      ],
+      "videos": [
+        {
+          "title": "How To 10 FPV Freestyle Tricks | LEARN THESE FIRST",
+          "channel": "Joshua Bardwell",
+          "url": "https://www.youtube.com/watch?v=0EqJ9C8KuTQ",
+          "duration": 0
+        }
+      ]
+    },
+    {
+      "name": "Vanny Roll",
+      "description": "Sharp 180-degree yaw spin while flying forward, immediately execute a 360-degree roll during backward flight, then 180° yaw spin in the same direction to resume forward flight.",
+      "difficulty": 3,
+      "phase": "Foundations",
+      "pro_tip": "The yaw spin and roll should flow together seamlessly. Practice the yaw-to-roll transition until it feels like one continuous motion.",
+      "prerequisites": [
+        "Roll",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "basics",
+        "open-air"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036119.gif"
+    },
+    {
+      "name": "Cubik's Rube",
+      "description": "The inverse of a Rubik's Cube: perform a 180° roll, then a 360° flip, then another 180° roll in the same direction. Creates a different tumbling axis pattern.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "If you know Rubik's Cube, swap the flip and roll axes. Break it down: half roll, full flip, half roll. The timing between transitions is what makes it look clean.",
+      "prerequisites": [
+        "Rubik's Cube"
+      ],
+      "tags": [
+        "advanced",
+        "open-air"
+      ],
+      "videos": [
+        {
+          "title": "Rubik's Cube / Cubik's Rube Tutorial",
+          "channel": "Fireblast FPV",
+          "url": "https://youtu.be/BUFIDrf_3XQ",
+          "duration": 0
+        }
+      ],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036062.gif"
+    },
+    {
+      "name": "Snapback",
+      "description": "Fly beneath an object while subtly increasing throttle and pitching backward until fully inverted, then swiftly execute a 180° roll to conclude the trick while tracking the object.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "The roll at the end should be crisp and fast. Keep the object in view throughout — lose sight of it and you'll lose orientation.",
+      "prerequisites": [
+        "Flip",
+        "Roll",
+        "Throttle Management"
+      ],
+      "tags": [
+        "novice",
+        "open-air"
+      ],
+      "videos": [
+        {
+          "title": "Snapback Tutorial",
+          "channel": "mrv FPV",
+          "url": "https://youtu.be/FKp1IxAS564",
+          "duration": 0
+        }
+      ],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036058.gif"
+    },
+    {
+      "name": "Inverted Yaw Tracking",
+      "description": "Execute a 180° roll toward an object, immediately yaw spin in the opposite direction to keep the object centered on screen, then finish with a 180° pitch down.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The opposite-direction yaw is counterintuitive. Practice the roll-to-yaw transition slowly before adding speed. Object tracking is everything.",
+      "prerequisites": [
+        "Inverted Yaw Spin"
+      ],
+      "tags": [
+        "advanced",
+        "open-air"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036105.gif"
+    },
+    {
+      "name": "Immelmann",
+      "description": "Begin a power loop, but at the peak of the loop execute a rapid 180° roll to complete the trick. Named after the WWI aviation maneuver.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "The roll at the top should be fast and decisive. If you hesitate, you'll drop altitude. Commit to the roll the instant you reach the peak.",
+      "prerequisites": [
+        "Power Loop",
+        "Roll"
+      ],
+      "tags": [
+        "powerloop"
+      ],
+      "videos": [
+        {
+          "title": "Immelmann Tutorial",
+          "channel": "zuidspook FPV",
+          "url": "https://youtu.be/2D505-TnWok",
+          "duration": 0
+        }
+      ],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036060.gif"
+    },
+    {
+      "name": "Power Split",
+      "description": "Initiate a power loop and once you pass the peak, immediately rewind into a Split-S maneuver, taking you back over and then under the object.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The transition from loop to split-s should be seamless. Practice the timing of the rewind at the peak — too early and you stall, too late and you complete the loop.",
+      "prerequisites": [
+        "Power Loop",
+        "Split-S"
+      ],
+      "tags": [
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/02/Power-Split.gif"
+    },
+    {
+      "name": "Power Flip",
+      "description": "Initiate a power loop, then at the peak of the loop perform a flip before completing the rest of the power loop.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The flip at the apex needs to be fast. You're already rotating from the loop, so the flip adds to that rotation. Time it so you don't over-rotate.",
+      "prerequisites": [
+        "Power Loop",
+        "Flip"
+      ],
+      "tags": [
+        "powerloop"
+      ],
+      "videos": [
+        {
+          "title": "Power Flip Tutorial",
+          "channel": "Professor Biohazard",
+          "url": "https://youtu.be/1x-6S5pwnlw",
+          "duration": 0
+        }
+      ],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036098.gif"
+    },
+    {
+      "name": "Power Switch",
+      "description": "Switch orientation mid-power-loop, transitioning from forward-facing to backward-facing (or vice versa) while maintaining the loop trajectory.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The switch requires a fast 180° yaw at the peak. Your muscle memory from standard power loops will fight you — practice the switch slowly first.",
+      "prerequisites": [
+        "Power Loop",
+        "Rewind"
+      ],
+      "tags": [
+        "advanced",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036096-1.gif"
+    },
+    {
+      "name": "Power Roll",
+      "description": "Begin a power loop, and at the peak of the loop execute a roll, then continue and complete the rest of the power loop.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The roll at the peak needs perfect timing. Too early and you clip the object, too late and you've already started descending. Use a tall object for practice.",
+      "prerequisites": [
+        "Power Loop",
+        "Roll"
+      ],
+      "tags": [
+        "advanced",
+        "powerloop"
+      ],
+      "videos": [
+        {
+          "title": "Power Roll Tutorial",
+          "channel": "inz",
+          "url": "https://youtu.be/BOrueByx5Us",
+          "duration": 0
+        }
+      ],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036102.gif"
+    },
+    {
+      "name": "Loop to Matty",
+      "description": "Begin a power loop and at the peak, transition into a matty flip descent on the other side. Combines two fundamental moves into one fluid motion.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The transition point is at the top of the loop. Instead of continuing the loop down, pitch forward into the matty flip. Needs solid matty flip fundamentals.",
+      "prerequisites": [
+        "Power Loop",
+        "Matty Flip"
+      ],
+      "tags": [
+        "advanced",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/01/1000037609.gif"
+    },
+    {
+      "name": "Inverted 360 Powerloop",
+      "description": "A power loop performed while incorporating a 360° yaw rotation through the loop. The entire loop includes a full yaw spin, creating a corkscrewing vertical loop.",
+      "difficulty": 10,
+      "phase": "Expert",
+      "pro_tip": "This combines the hardest elements of a power loop with continuous yaw input. Master power rolls and inverted yaw spins before attempting.",
+      "prerequisites": [
+        "Power Loop",
+        "Inverted Yaw Spin"
+      ],
+      "tags": [
+        "master",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036100.gif"
+    },
+    {
+      "name": "Barani",
+      "description": "Fly beneath an object, perform half a power loop to inverted with the horizon in the top half of view, execute a 180° inverted yaw spin, then finish with a matty flip back under the object.",
+      "difficulty": 10,
+      "phase": "Expert",
+      "pro_tip": "This is a master-level trick combining three distinct moves. The yaw spin while inverted at the peak is the hardest part — practice inverted yaw spins until they're second nature.",
+      "prerequisites": [
+        "Power Loop",
+        "Matty Flip",
+        "Inverted Yaw Spin"
+      ],
+      "tags": [
+        "master",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036094.gif"
+    },
+    {
+      "name": "Immelmatt",
+      "description": "Hybrid of Immelmann and Matty Flip — perform an Immelmann at the peak and immediately transition into a matty flip descent.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The Immelmann roll at the top sets your orientation for the matty exit. Make sure the roll is complete before initiating the matty pitch.",
+      "prerequisites": [
+        "Immelmann",
+        "Matty Flip"
+      ],
+      "tags": [
+        "advanced",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/05/1000043096.webp"
+    },
+    {
+      "name": "Maverick Loop",
+      "description": "Fly beneath an object, apply throttle and gradually pitch backward, pass over the object while reducing throttle, then pass back under — all while maintaining a forward-looking orientation.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "The key difference from a power loop is maintaining forward-looking orientation throughout. You never go fully inverted — the camera always faces forward.",
+      "prerequisites": [
+        "Throttle Management",
+        "Flip"
+      ],
+      "tags": [
+        "maverick"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036092.gif"
+    },
+    {
+      "name": "Mavvelmann",
+      "description": "A maverick loop with an Immelmann-style 180° roll at the peak. Combines maverick orientation with the direction-changing roll at the apex.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "The roll at the peak changes your exit direction. Practice standard maverick loops until they're smooth before adding the roll.",
+      "prerequisites": [
+        "Maverick Loop",
+        "Roll"
+      ],
+      "tags": [
+        "maverick"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/05/1000043092.webp"
+    },
+    {
+      "name": "Half Mavvy",
+      "description": "A partial maverick loop — go halfway up and over, then reverse direction. Like a maverick rewind that creates a dramatic stall-and-reverse effect.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The reversal point is the hardest part. You need to kill your momentum precisely at the halfway point and smoothly reverse. Practice the stall timing.",
+      "prerequisites": [
+        "Maverick Loop",
+        "Rewind"
+      ],
+      "tags": [
+        "advanced",
+        "maverick"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036044.gif"
+    },
+    {
+      "name": "Donkey Loop",
+      "description": "Perform a maverick loop and during the loop, execute a 180° pitch down to invert, followed by a 360° yaw spin, then complete the loop.",
+      "difficulty": 10,
+      "phase": "Expert",
+      "pro_tip": "This is a master-level maverick variant. The pitch-to-invert plus yaw spin mid-loop requires exceptional orientation awareness and throttle management.",
+      "prerequisites": [
+        "Maverick Loop",
+        "Inverted Yaw Spin"
+      ],
+      "tags": [
+        "master",
+        "maverick"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036086.gif"
+    },
+    {
+      "name": "Anti Matty",
+      "description": "A reverse matty flip — instead of pitching backward over an object, you pitch forward under it. The flight path is the mirror image of a standard matty.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Think of it as approaching from below and pitching forward to dive away. The orientation flip from standard matty muscle memory can be confusing at first.",
+      "prerequisites": [
+        "Matty Flip"
+      ],
+      "tags": [
+        "matty"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/05/1000043093.webp"
+    },
+    {
+      "name": "Matty Twister",
+      "description": "A matty flip with an added rotational twist during the descent. The yaw spin while descending backward creates a dramatic corkscrew effect.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "Add the yaw input as you begin the backward descent phase. The twist should be smooth and continuous — don't add it during the initial pitch-back.",
+      "prerequisites": [
+        "Matty Flip",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "matty"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040852.gif"
+    },
+    {
+      "name": "Matty 360",
+      "description": "A matty flip with a full 360° yaw spin incorporated. The yaw spin during the backward pitch-and-descent creates a complex multi-axis motion.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The yaw spin should start as you begin pitching back. Time it so the 360° yaw completes as you finish the matty descent. Smooth yaw input is key.",
+      "prerequisites": [
+        "Matty Flip",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "advanced",
+        "matty"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036046.gif"
+    },
+    {
+      "name": "540 Split-S",
+      "description": "A Split-S with an additional 180° of rotation, totaling 540° of pitch rotation. Creates a more dramatic diving reversal with extra rotation.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "You need significantly more altitude than a standard Split-S. The extra rotation means more time inverted and more altitude loss. Commit to the full 540°.",
+      "prerequisites": [
+        "Split-S"
+      ],
+      "tags": [
+        "split-s"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/06/1000044751.gif"
+    },
+    {
+      "name": "Cradle",
+      "description": "A pole dancing trick where you fly around an object and transition to inverted flight while maintaining a smooth orbit path. A foundation for trippy spins.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "Start with wide orbits and gradually tighten. The transition to inverted should be smooth — don't snap roll, ease into it while maintaining the orbit.",
+      "prerequisites": [
+        "Orbit"
+      ],
+      "tags": [
+        "pole-dancing"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036050.gif"
+    },
+    {
+      "name": "Side-Lock Rewind",
+      "description": "Lock your drone in a sideways orientation relative to the pole, fly upward along it, then rewind back down the same path while maintaining the lock.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "The side-lock requires constant roll and yaw correction. Keep the pole at a fixed position in your view throughout the ascent and descent.",
+      "prerequisites": [
+        "Orbit",
+        "Rewind"
+      ],
+      "tags": [
+        "pole-dancing"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040460.gif"
+    },
+    {
+      "name": "Whiplash",
+      "description": "Fly toward a pole-like object, look back to keep it in view while simultaneously rolling toward it and pitching forward until you level out. A snappy proximity move.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "The coordinated roll-and-pitch while tracking the object is the challenge. Start far from the object and gradually decrease distance as you get comfortable.",
+      "prerequisites": [
+        "Orbit",
+        "Roll"
+      ],
+      "tags": [
+        "pole-dancing"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036078.gif"
+    },
+    {
+      "name": "Pole Dance",
+      "description": "Fly toward an object and in one seamless motion perform two consecutive whiplashes back-to-back. An advanced proximity trick requiring precise stick coordination.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The transition between the two whiplashes should be invisible. Practice single whiplashes until they're automatic, then chain them without pausing.",
+      "prerequisites": [
+        "Whiplash",
+        "Trippy Spin"
+      ],
+      "tags": [
+        "advanced",
+        "pole-dancing"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/f89bc02f-6a33-4050-b591-abb7da78f24a-1.gif"
+    },
+    {
+      "name": "Double Rolling Trippy Spin",
+      "description": "A master-level trippy spin variant with double the roll rate — two full rolls per orbit cycle. Creates an extremely fast corkscrew effect around the object.",
+      "difficulty": 10,
+      "phase": "Expert",
+      "pro_tip": "Double the roll rate means half the time to manage throttle and yaw per rotation. Your inputs need to be twice as fast and precise. Not for the faint of heart.",
+      "prerequisites": [
+        "Trippy Spin"
+      ],
+      "tags": [
+        "master",
+        "pole-dancing"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036053.gif"
+    },
+    {
+      "name": "Jump Rope",
+      "description": "Initiate a 90° yaw spin while applying throttle with a slight roll toward the object to fly over it. At the peak, reduce throttle and add a small roll in the opposite direction to descend.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "Think of it like jumping a rope — up and over, then down. The yaw keeps you oriented while the roll-and-throttle combo creates the arc.",
+      "prerequisites": [
+        "Yaw Spin",
+        "Roll",
+        "Throttle Management"
+      ],
+      "tags": [
+        "jump-rope"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040880.gif"
+    },
+    {
+      "name": "Cinnamon Roll",
+      "description": "An orbital flight path with altitude variation — approach, turn 90°, then orbit while passing over the object on one half and under it on the other half.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "The altitude change should be smooth and continuous, not abrupt. Think sine wave around the object. Keep visual contact throughout.",
+      "prerequisites": [
+        "Orbit",
+        "Throttle Management"
+      ],
+      "tags": [
+        "jump-rope"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/02/1000039099.gif"
+    },
+    {
+      "name": "Double Dutch",
+      "description": "Execute a jump rope maneuver and at the peak, perform a 360° roll in the opposite direction, then conclude by completing the jump descent.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The opposite-direction roll at the peak is disorienting because it counters your rotational momentum. The brief float at the top gives you time for the roll.",
+      "prerequisites": [
+        "Jump Rope",
+        "Roll"
+      ],
+      "tags": [
+        "jump-rope"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040874.gif"
+    },
+    {
+      "name": "Stall Rewind",
+      "description": "Ascend toward a tall object (10ft+), cut throttle to stall just before reaching it, then descend back down retracing your initial path. The flight path resembles an exponential curve.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "The stall point should be as close to the object as possible without hitting it. Practice the throttle cut timing — it's the foundation for all rewind tricks.",
+      "prerequisites": [
+        "Throttle Management"
+      ],
+      "tags": [
+        "rewind"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/05/1000043091.webp"
+    },
+    {
+      "name": "Stall Matty Rewind",
+      "description": "Ascend, stall near an object, transition into a matty flip, then rewind back down. Combines the stall rewind concept with a matty flip at the reversal point.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The matty flip at the stall point provides the reversal mechanism. Practice matty flips at low speed first, since you'll be at near-zero velocity at the stall.",
+      "prerequisites": [
+        "Stall Rewind",
+        "Matty Flip"
+      ],
+      "tags": [
+        "rewind",
+        "matty"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/02/1000039660.gif"
+    },
+    {
+      "name": "Building Dive",
+      "description": "Fly toward a building, gain elevation (40ft/12m+ preferred), cut throttle and pitch down to start a steep dive along the building's face, then level out near the ground.",
+      "difficulty": 3,
+      "phase": "Basic Tricks",
+      "pro_tip": "Plan your pull-out altitude before starting. The closer to the building face, the more dramatic the footage. Always know where the ground is.",
+      "prerequisites": [
+        "Dive",
+        "Throttle Management"
+      ],
+      "tags": [
+        "wall",
+        "proximity"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036177.gif"
+    },
+    {
+      "name": "Reverse Wall Ride",
+      "description": "Skim along a wall surface while flying backward. Requires maintaining wall proximity with inverted control orientation.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "Start with forward wall rides until they're second nature, then practice the same motion in reverse. Your yaw and roll inputs are mirrored when flying backward.",
+      "prerequisites": [
+        "Wall Ride"
+      ],
+      "tags": [
+        "wall",
+        "proximity"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040854.gif"
+    },
+    {
+      "name": "Reverse Knife Edge",
+      "description": "A knife edge flown in reverse — roll 90° sideways and fly backward through a gap. Requires managing yaw for direction while flying backward in a tilted orientation.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "Master forward knife edges first. The backward version reverses your yaw-to-direction mapping, which is incredibly disorienting at first.",
+      "prerequisites": [
+        "Knife Edge"
+      ],
+      "tags": [
+        "proximity",
+        "gaps"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/02/1000039644.gif"
+    },
+    {
+      "name": "Ninja Star",
+      "description": "Execute a 90° roll immediately followed by a 360° yaw spin while passing through a gap, then execute another roll to recover. Best through gaps 2-3x your drone's size.",
+      "difficulty": 8,
+      "phase": "Advanced",
+      "pro_tip": "The yaw spin happens while you're already tilted 90°. Practice the roll-to-yaw transition in open air before attempting through actual gaps.",
+      "prerequisites": [
+        "Knife Edge",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "advanced",
+        "proximity",
+        "gaps"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036209.gif"
+    },
+    {
+      "name": "Slide Disarm",
+      "description": "Fly forward at low altitude and disarm the motors to slide the drone along a smooth surface. A stylish way to end a flight or trick sequence.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Approach low and slow on a smooth surface. Disarm just before touching down. The momentum should carry you in a slide. Grass or smooth concrete works best.",
+      "prerequisites": [
+        "Throttle Management"
+      ],
+      "tags": [
+        "misc"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036036.jpg"
+    },
+    {
+      "name": "Perch",
+      "description": "Land the drone on top of an elevated object (pole, branch, ledge) and balance it there. Tests precision landing and throttle finesse.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Approach from above, descend very slowly. Cut throttle at the last possible moment. Wider landing surfaces are easier — start with flat posts.",
+      "prerequisites": [
+        "Hover Control",
+        "Throttle Management"
+      ],
+      "tags": [
+        "misc"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036036.jpg"
+    },
+    {
+      "name": "Eject Roll",
+      "description": "A dramatic exit maneuver — punch upward and execute a roll while ejecting away from an object or structure. Creates a stylish departure from proximity flying.",
+      "difficulty": 4,
+      "phase": "Basic Tricks",
+      "pro_tip": "Full throttle punch upward, then add the roll as you gain altitude. The roll should start after you have enough clearance from the object.",
+      "prerequisites": [
+        "Roll",
+        "Throttle Management"
+      ],
+      "tags": [
+        "misc"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2024/03/1000040888.gif"
+    },
+    {
+      "name": "Blind Loop",
+      "description": "Approach an object, execute a 180° yaw spin just before reaching it, then immediately initiate a 'blind' power loop over the object while facing away from your direction of travel.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The yaw spin before the loop means you can't see where you're going during the loop — hence 'blind'. Start with tall, forgiving objects and wide loops.",
+      "prerequisites": [
+        "Power Loop",
+        "Yaw Spin"
+      ],
+      "tags": [
+        "misc",
+        "powerloop"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036082-3.gif"
+    },
+    {
+      "name": "True Barani",
+      "description": "An intermediate combo trick mixing front flip with a half twist. Different from the powerloop Barani — this is a pure open-air tumbling maneuver inspired by gymnastics.",
+      "difficulty": 6,
+      "phase": "Intermediate",
+      "pro_tip": "The half twist should be integrated into the flip, not added as a separate input. Think of it as one fluid motion, not flip-then-twist.",
+      "prerequisites": [
+        "Flip",
+        "Roll"
+      ],
+      "tags": [
+        "misc"
+      ],
+      "videos": [],
+      "demo_gif_url": "https://prowhooper.com/wp-content/uploads/2023/12/1000036084.gif"
+    }
+  ]
+}

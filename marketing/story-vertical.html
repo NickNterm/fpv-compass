@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; background: #0a0f1e; font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+  .card {
+    width: 1080px; height: 1920px;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: space-between;
+    position: relative; padding: 80px 60px;
+  }
+  .bg-glow {
+    position: absolute; top: 200px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+  }
+  .top { position: relative; text-align: center; }
+  .logo-icon { margin-bottom: 48px; }
+  .logo-icon svg { width: 96px; height: 96px; }
+  h1 {
+    font-size: 80px; font-weight: 800; color: #fff;
+    line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 28px;
+  }
+  h1 em { font-style: normal; color: #10b981; }
+  p { font-size: 30px; color: #9ca3af; line-height: 1.5; }
+
+  .middle { position: relative; width: 100%; }
+  .feature-list {
+    display: flex; flex-direction: column; gap: 24px; width: 100%;
+  }
+  .feature {
+    display: flex; align-items: center; gap: 24px;
+    background: #111827; border: 1px solid #1f2937; border-radius: 20px;
+    padding: 28px 32px;
+  }
+  .feature-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: rgba(16,185,129,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; flex-shrink: 0;
+  }
+  .feature h3 { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .feature p { font-size: 18px; color: #6b7280; margin: 0; }
+
+  .bottom {
+    position: relative; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+  }
+  .cta {
+    background: #10b981; color: #fff; padding: 20px 48px;
+    border-radius: 16px; font-size: 24px; font-weight: 700;
+    display: inline-block;
+  }
+  .url { font-size: 20px; color: #4b5563; font-weight: 500; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="bg-glow"></div>
+
+  <div class="top">
+    <div class="logo-icon">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+    </div>
+    <h1>Your FPV<br><em>trick roadmap</em></h1>
+    <p>From first flip to Rubik's cube.<br>Every trick in the right order.</p>
+  </div>
+
+  <div class="middle">
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-icon">🗺</div>
+        <div>
+          <h3>Visual Skill Tree</h3>
+          <p>See what to learn next</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎬</div>
+        <div>
+          <h3>Best Tutorial Videos</h3>
+          <p>Curated from the community</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏆</div>
+        <div>
+          <h3>Track Your Progress</h3>
+          <p>Mark tricks as learned</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="cta">Try it free</div>
+    <div class="url">fpv-compass.pamelesxi.gr</div>
+  </div>
+</div>
+</body>
+</html>

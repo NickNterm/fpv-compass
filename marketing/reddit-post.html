@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 900px; background: #0a0f1e; font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+  .card {
+    width: 1200px; height: 900px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; padding: 60px;
+  }
+  .bg-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+  }
+  .content { position: relative; text-align: center; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+    color: #34d399; padding: 8px 20px; border-radius: 99px;
+    font-size: 16px; font-weight: 600; margin-bottom: 28px;
+  }
+  .badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; }
+  h1 {
+    font-size: 56px; font-weight: 800; color: #fff;
+    line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px;
+  }
+  h1 em { font-style: normal; color: #10b981; }
+  .subtitle { font-size: 22px; color: #9ca3af; line-height: 1.5; margin-bottom: 40px; }
+
+  .problem-solution {
+    display: flex; gap: 32px; width: 100%; max-width: 960px; margin-bottom: 40px;
+  }
+  .ps-card {
+    flex: 1; border-radius: 16px; padding: 28px; text-align: left;
+  }
+  .ps-card.problem { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.15); }
+  .ps-card.solution { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.15); }
+  .ps-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+  .ps-card.problem .ps-label { color: #f87171; }
+  .ps-card.solution .ps-label { color: #34d399; }
+  .ps-card ul { list-style: none; }
+  .ps-card li { font-size: 17px; color: #d1d5db; padding: 4px 0; }
+  .ps-card li::before { margin-right: 8px; }
+  .ps-card.problem li::before { content: "✕"; color: #f87171; }
+  .ps-card.solution li::before { content: "✓"; color: #34d399; }
+
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .brand svg { width: 28px; height: 28px; }
+  .brand span { font-size: 18px; color: #10b981; font-weight: 700; }
+  .brand .url { color: #4b5563; font-weight: 500; margin-left: 8px; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="bg-glow"></div>
+  <div class="content">
+    <div class="badge"><span class="badge-dot"></span> Free &amp; Open</div>
+    <h1>Learning FPV tricks<br><em>shouldn't be random</em></h1>
+    <p class="subtitle">I built a skill tree that tells you exactly which trick to learn next.</p>
+
+    <div class="problem-solution">
+      <div class="ps-card problem">
+        <div class="ps-label">The problem</div>
+        <ul>
+          <li>Tutorials scattered across YouTube</li>
+          <li>No clear progression path</li>
+          <li>Trying tricks you're not ready for</li>
+          <li>Crashing because you skipped steps</li>
+        </ul>
+      </div>
+      <div class="ps-card solution">
+        <div class="ps-label">FPV Compass</div>
+        <ul>
+          <li>30 tricks in the right order</li>
+          <li>Best tutorial video for each trick</li>
+          <li>Visual skill tree with prerequisites</li>
+          <li>Track your progress as you learn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brand">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+      <span>FPV Compass</span>
+      <span class="url">fpv-compass.pamelesxi.gr</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1080px; background: #0a0f1e; font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+  .card {
+    width: 1080px; height: 1080px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; padding: 60px;
+  }
+  .bg-glow {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%);
+  }
+  .content { position: relative; text-align: center; }
+  .logo-icon { margin-bottom: 40px; }
+  .logo-icon svg { width: 80px; height: 80px; }
+  h1 {
+    font-size: 72px; font-weight: 800; color: #fff;
+    line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 24px;
+  }
+  h1 em { font-style: normal; color: #10b981; }
+  p { font-size: 26px; color: #9ca3af; line-height: 1.5; margin-bottom: 40px; }
+  .tree-preview {
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .tree-row { display: flex; gap: 12px; }
+  .node {
+    background: #111827; border: 1.5px solid #1f2937; border-radius: 12px;
+    padding: 12px 20px; font-size: 15px; font-weight: 600; color: #6b7280;
+  }
+  .node.done { border-color: rgba(16,185,129,0.4); color: #34d399; }
+  .node.done::before { content: "✓ "; }
+  .node.active { border-color: rgba(249,115,22,0.5); color: #fde047; box-shadow: 0 0 20px rgba(249,115,22,0.08); }
+  .node.active::before { content: "● "; color: #f97316; }
+  .node.locked { opacity: 0.4; }
+  .arrow { color: #374151; font-size: 20px; }
+  .brand {
+    position: absolute; bottom: 40px; left: 0; right: 0;
+    text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+  .brand svg { width: 24px; height: 24px; }
+  .brand span { font-size: 18px; color: #10b981; font-weight: 700; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="bg-glow"></div>
+  <div class="content">
+    <div class="logo-icon">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+    </div>
+    <h1>Stop guessing.<br><em>Follow the path.</em></h1>
+    <p>A visual skill tree for every FPV freestyle trick.</p>
+    <div class="tree-preview">
+      <div class="tree-row">
+        <div class="node done">Hover</div>
+        <div class="node done">Flips</div>
+        <div class="node done">Rolls</div>
+      </div>
+      <div class="arrow">↓</div>
+      <div class="tree-row">
+        <div class="node done">Power Loop</div>
+        <div class="node active">Split-S</div>
+        <div class="node locked">Matty Flip</div>
+      </div>
+      <div class="arrow">↓</div>
+      <div class="tree-row">
+        <div class="node locked">Rubik's Cube</div>
+        <div class="node locked">Sbang</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+    <span>fpv-compass.pamelesxi.gr</span>
+  </div>
+</div>
+</body>
+</html>

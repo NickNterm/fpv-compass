@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; background: #0a0f1e; font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+  .card {
+    width: 1200px; height: 630px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .bg-glow {
+    position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 600px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+  }
+  .content { position: relative; text-align: center; padding: 0 80px; }
+  .logo {
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 32px;
+  }
+  .logo svg { width: 48px; height: 48px; }
+  .logo span { font-size: 22px; font-weight: 700; color: #10b981; letter-spacing: -0.02em; }
+  h1 {
+    font-size: 64px; font-weight: 800; color: #fff;
+    line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px;
+  }
+  h1 em { font-style: normal; color: #10b981; }
+  p { font-size: 24px; color: #9ca3af; line-height: 1.5; max-width: 700px; margin: 0 auto; }
+  .pills {
+    display: flex; gap: 10px; justify-content: center; margin-top: 32px;
+  }
+  .pill {
+    background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+    color: #34d399; padding: 8px 18px; border-radius: 99px;
+    font-size: 15px; font-weight: 600;
+  }
+  .url {
+    position: absolute; bottom: 28px; left: 0; right: 0;
+    text-align: center; font-size: 16px; color: #4b5563; font-weight: 500;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="bg-glow"></div>
+  <div class="content">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+      <span>FPV Compass</span>
+    </div>
+    <h1>Every FPV trick.<br><em>In the right order.</em></h1>
+    <p>The visual skill tree for freestyle pilots. 30 tricks, video tutorials, and progress tracking.</p>
+    <div class="pills">
+      <span class="pill">Skill Tree</span>
+      <span class="pill">Video Tutorials</span>
+      <span class="pill">Track Progress</span>
+    </div>
+  </div>
+  <div class="url">fpv-compass.pamelesxi.gr</div>
+</div>
+</body>
+</html>

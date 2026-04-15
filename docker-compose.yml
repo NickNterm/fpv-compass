@@ -1,0 +1,64 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-fpvcompass}
+      POSTGRES_USER: ${POSTGRES_USER:-fpvcompass}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fpvcompass}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  django:
+    build: ./backend
+    restart: unless-stopped
+    command: >
+      sh -c "python manage.py migrate --noinput &&
+             python manage.py collectstatic --noinput 2>/dev/null;
+             python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-insecure-dev-key}
+      DJANGO_DEBUG: ${DJANGO_DEBUG:-True}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1,django,*}
+      POSTGRES_DB: ${POSTGRES_DB:-fpvcompass}
+      POSTGRES_USER: ${POSTGRES_USER:-fpvcompass}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+    ports:
+      - "8001:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+
+  nextjs:
+    build:
+      context: ./frontend
+      target: dev
+    restart: unless-stopped
+    command: sh -c "npm install && npx next dev"
+    environment:
+      INTERNAL_API_URL: http://django:8000
+      NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: ${NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN:-}
+      NEXT_PUBLIC_POSTHOG_HOST: ${NEXT_PUBLIC_POSTHOG_HOST:-}
+    ports:
+      - "3001:3000"
+    depends_on:
+      - django
+    volumes:
+      - ./frontend:/app
+      - nextjs_node_modules:/app/node_modules
+      - /app/.next
+
+volumes:
+  postgres_data:
+  nextjs_node_modules:

@@ -1,0 +1,35 @@
+# FPV Compass
+
+> FPV Compass is the trickionary and skill tree for FPV freestyle pilots — every trick in the right order, linked to the best community tutorials.
+
+FPV Compass is a trickionary and skill tree for FPV freestyle pilots. It indexes every freestyle trick into a progression-based skill tree, from Foundations to Advanced, and links each one to hand-picked community tutorial videos on YouTube. It does not host original video content. Pilots use FPV Compass to know what to learn next, track what they've learned, and save favorites.
+
+## Core concepts
+
+- Trick: an FPV maneuver (e.g. Power Loop, Split-S) with difficulty 1–10, description, pro tip, and linked tutorial videos.
+- Phase: groups tricks by progression stage (Foundations, Basic Tricks, Intermediate, Advanced).
+- Prerequisites: tricks depend on other tricks, forming a directed skill tree.
+- Tree view: visual skill tree grouped by phase.
+- List view: flat, filterable list sorted by difficulty.
+- Community tricks: user-submitted tricks that admins can promote into the official tree.
+- Progress: authenticated users mark tricks as learned and save favorites; a public like count is visible to everyone.
+
+## Main pages
+
+- [Home](https://www.fpv-compass.xyz/): landing page and entry point.
+- [Skill tree](https://www.fpv-compass.xyz/tree): visual progression graph of all official tricks.
+- [Tricks list](https://www.fpv-compass.xyz/tricks): full searchable and filterable list of tricks.
+- [Community](https://www.fpv-compass.xyz/community): user-submitted tricks awaiting promotion.
+- [Ideas](https://www.fpv-compass.xyz/ideas): upcoming features and roadmap.
+- [FAQ](https://www.fpv-compass.xyz/faq): common questions about the project.
+
+## Scope
+
+- Freestyle FPV tricks only (other disciplines are future work).
+- Email/password authentication for progress and favorites.
+- Reddit-style nested comments with upvotes/downvotes on tricks.
+- No original video content — all tutorials link out to YouTube.
+
+## Attribution
+
+Attribution of linked videos goes to their original YouTube creators. FPV Compass is a non-commercial index.

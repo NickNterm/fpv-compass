@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1500px; height: 500px; background: #0a0f1e; font-family: 'Inter', system-ui, sans-serif; overflow: hidden; }
+  .card {
+    width: 1500px; height: 500px;
+    display: flex; align-items: center;
+    position: relative; padding: 0 80px;
+  }
+  .bg-glow {
+    position: absolute; top: -150px; right: 100px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, transparent 70%);
+  }
+  .left { position: relative; flex: 1; }
+  .logo {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+  }
+  .logo svg { width: 36px; height: 36px; }
+  .logo span { font-size: 18px; font-weight: 700; color: #10b981; }
+  h1 {
+    font-size: 52px; font-weight: 800; color: #fff;
+    line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px;
+  }
+  h1 em { font-style: normal; color: #10b981; }
+  p { font-size: 20px; color: #6b7280; }
+
+  .right {
+    position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .tree-row { display: flex; gap: 10px; }
+  .node {
+    background: #111827; border: 1.5px solid #1f2937; border-radius: 10px;
+    padding: 10px 16px; font-size: 13px; font-weight: 600; color: #6b7280;
+    white-space: nowrap;
+  }
+  .node.done { border-color: rgba(16,185,129,0.4); color: #34d399; }
+  .node.active { border-color: rgba(249,115,22,0.5); color: #fde047; }
+  .node.locked { opacity: 0.35; }
+  .arrow { color: #374151; font-size: 16px; }
+  .url {
+    position: absolute; bottom: 20px; right: 80px;
+    font-size: 14px; color: #374151; font-weight: 500;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="card">
+  <div class="bg-glow"></div>
+  <div class="left">
+    <div class="logo">
+      <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="29" stroke="#10b981" stroke-width="2"/><polygon points="32,8 27,32 32,36 37,32" fill="#10b981"/></svg>
+      <span>FPV Compass</span>
+    </div>
+    <h1>Every FPV trick.<br><em>In the right order.</em></h1>
+    <p>The visual skill tree for freestyle pilots.</p>
+  </div>
+  <div class="right">
+    <div class="tree-row">
+      <div class="node done">✓ Hover</div>
+      <div class="node done">✓ Flips</div>
+      <div class="node done">✓ Rolls</div>
+      <div class="node done">✓ Yaw Spin</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="tree-row">
+      <div class="node done">✓ Power Loop</div>
+      <div class="node active">● Split-S</div>
+      <div class="node locked">Matty Flip</div>
+      <div class="node locked">Orbit</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="tree-row">
+      <div class="node locked">Inverted Yaw</div>
+      <div class="node locked">Trippy Spin</div>
+      <div class="node locked">Knife Edge</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="tree-row">
+      <div class="node locked">Rubik's Cube</div>
+      <div class="node locked">Sbang</div>
+    </div>
+  </div>
+  <div class="url">fpv-compass.pamelesxi.gr</div>
+</div>
+</body>
+</html>
