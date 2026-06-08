@@ -3,6 +3,8 @@ import type {
   PaginatedResponse,
   Phase,
   Idea,
+  Post,
+  PostDetail,
 } from "@/lib/types";
 
 // Server-side data access. Runs in Server Components against the internal Django
@@ -68,6 +70,35 @@ export async function fetchIdeasServer(
     return Array.isArray(data) ? data : [];
   } catch {
     return [];
+  }
+}
+
+export async function fetchPostsServer(
+  sort: "votes" | "newest" = "votes",
+): Promise<Post[]> {
+  try {
+    const res = await fetch(`${INTERNAL_API}/api/blog/posts/?sort=${sort}`, {
+      next: { revalidate: 300 },
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    });
+    if (!res.ok) return [];
+    const data = (await res.json()) as Post[];
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchPostServer(id: string): Promise<PostDetail | null> {
+  try {
+    const res = await fetch(`${INTERNAL_API}/api/blog/posts/${id}/`, {
+      next: { revalidate: 300 },
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    });
+    if (!res.ok) return null;
+    return (await res.json()) as PostDetail;
+  } catch {
+    return null;
   }
 }
 

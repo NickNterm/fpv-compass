@@ -34,6 +34,12 @@ export default function Header() {
             >
               Community
             </Link>
+            <Link
+              href="/blog"
+              className="rounded-md px-3 py-1.5 text-xs font-medium text-gray-400 hover:bg-gray-800 hover:text-white"
+            >
+              Blog
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-3">

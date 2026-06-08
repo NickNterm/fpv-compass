@@ -141,3 +141,17 @@ export interface IdeaComment {
   body: string;
   created_at: string;
 }
+
+export interface Post {
+  id: number;
+  title: string;
+  body: string;
+  author: string;
+  vote_count: number;
+  user_vote: number | null;
+  created_at: string;
+}
+
+export interface PostDetail extends Post {
+  updated_at: string;
+}

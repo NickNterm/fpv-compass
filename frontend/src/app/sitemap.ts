@@ -44,6 +44,27 @@ async function fetchTrickSlugs(): Promise<TrickSlug[]> {
   return all;
 }
 
+interface PostStub {
+  id: number;
+  updated_at?: string;
+}
+
+async function fetchPostStubs(): Promise<PostStub[]> {
+  try {
+    const res = await fetch(`${INTERNAL_API}/api/blog/posts/?sort=newest`, {
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return [];
+    const data = (await res.json()) as Array<{ id?: number; updated_at?: string }>;
+    if (!Array.isArray(data)) return [];
+    return data
+      .filter((p): p is PostStub => typeof p.id === "number")
+      .map((p) => ({ id: p.id, updated_at: p.updated_at }));
+  } catch {
+    return [];
+  }
+}
+
 function isoDate(d: Date): string {
   return d.toISOString().split("T")[0];
 }
@@ -56,6 +77,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/tricks`, lastModified: today, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE_URL}/community`, lastModified: today, changeFrequency: "weekly", priority: 0.6 },
     { url: `${SITE_URL}/ideas`, lastModified: today, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${SITE_URL}/blog`, lastModified: today, changeFrequency: "daily", priority: 0.7 },
     { url: `${SITE_URL}/faq`, lastModified: today, changeFrequency: "monthly", priority: 0.7 },
   ];
 
@@ -67,5 +89,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...trickRoutes];
+  const posts = await fetchPostStubs();
+  const postRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
+    url: `${SITE_URL}/blog/${p.id}`,
+    lastModified: p.updated_at ? isoDate(new Date(p.updated_at)) : today,
+    changeFrequency: "weekly",
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...trickRoutes, ...postRoutes];
 }

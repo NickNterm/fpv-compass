@@ -16,4 +16,5 @@ urlpatterns = [
     path("api/", include("favorites.urls")),
     path("api/", include("comments.urls")),
     path("api/", include("ideas.urls")),
+    path("api/", include("blog.urls")),
 ]

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "favorites",
     "comments",
     "ideas",
+    "blog",
 ]
 
 MIDDLEWARE = [
