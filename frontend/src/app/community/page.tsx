@@ -1,33 +1,13 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { apiGet } from "@/lib/api";
-import { useAuth } from "@/context/auth-context";
-import type { PaginatedResponse, TrickListItem } from "@/lib/types";
+import { fetchCommunityTricksServer } from "@/lib/server-api";
 import TrickCard from "@/components/tricks/trick-card";
-import Button from "@/components/ui/button";
+import CommunitySubmitButton from "@/components/community/submit-button";
 
-export default function CommunityPage() {
-  const { user } = useAuth();
-  const [tricks, setTricks] = useState<TrickListItem[]>([]);
-  const [loading, setLoading] = useState(true);
+// Render per-request so the community trick list (and its /tricks/[slug] links)
+// is present in the initial HTML for crawlers, not fetched client-side.
+export const dynamic = "force-dynamic";
 
-  useEffect(() => {
-    async function load() {
-      try {
-        const data = await apiGet<PaginatedResponse<TrickListItem>>(
-          "/tricks/?is_community=true"
-        );
-        setTricks(data.results);
-      } catch {
-        // ignore
-      } finally {
-        setLoading(false);
-      }
-    }
-    load();
-  }, []);
+export default async function CommunityPage() {
+  const tricks = await fetchCommunityTricksServer();
 
   return (
     <div className="mx-auto max-w-4xl px-6 py-10">
@@ -38,27 +18,15 @@ export default function CommunityPage() {
             Tricks submitted by the community. The best ones get promoted to the official tree.
           </p>
         </div>
-        {user && (
-          <Link href="/community/submit">
-            <Button>Submit a Trick</Button>
-          </Link>
-        )}
+        <CommunitySubmitButton />
       </div>
 
-      {loading ? (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-32 animate-pulse rounded-xl bg-gray-800/50" />
-          ))}
-        </div>
-      ) : tricks.length === 0 ? (
+      {tricks.length === 0 ? (
         <div className="rounded-xl border border-gray-800 bg-[#111827] p-12 text-center">
           <p className="text-gray-500">No community tricks yet.</p>
-          {user && (
-            <Link href="/community/submit">
-              <Button className="mt-4">Be the first to submit!</Button>
-            </Link>
-          )}
+          <CommunitySubmitButton className="mt-4">
+            Be the first to submit!
+          </CommunitySubmitButton>
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -61,8 +61,10 @@ function extractYoutubeId(url: string): string | null {
   }
 }
 
-function isoDurationFromSeconds(seconds: number): string {
-  if (!seconds || seconds <= 0) return "PT0S";
+function isoDurationFromSeconds(seconds: number): string | null {
+  // Schema.org duration must be a positive value. Return null when unknown so
+  // the caller can omit the property entirely (omitting is valid; "PT0S" is not).
+  if (!seconds || seconds <= 0) return null;
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
@@ -161,11 +163,14 @@ function buildJsonLd(trick: TrickDetail): Record<string, unknown>[] {
           trick.created_at ||
           trick.updated_at ||
           new Date().toISOString().split("T")[0],
-        duration: isoDurationFromSeconds(v.duration_seconds),
         embedUrl: `https://www.youtube.com/embed/${id}`,
         contentUrl: v.youtube_url,
         isPartOf: { "@type": "WebPage", "@id": pageUrl },
       };
+      const duration = isoDurationFromSeconds(v.duration_seconds);
+      if (duration) {
+        node.duration = duration;
+      }
       if (v.channel_name) {
         node.author = { "@type": "Person", name: v.channel_name };
       }
