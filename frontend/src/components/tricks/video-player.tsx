@@ -79,20 +79,51 @@ export function VideoListItem({ video }: { video: Video }) {
 }
 
 export function DemoGif({ url, trickName }: { url: string; trickName: string }) {
+  const isProWhooper = url.includes("prowhooper.com");
+  const proWhooperUrl = "https://prowhooper.com/tricktionary/";
+
+  const image = (
+    <img
+      src={url}
+      alt={`${trickName} demo`}
+      className="absolute inset-0 h-full w-full object-contain"
+      loading="lazy"
+    />
+  );
+
   return (
     <div className="overflow-hidden rounded-xl border border-gray-700/50 bg-[#0a0f1e]">
       <div className="relative aspect-video">
-        <img
-          src={url}
-          alt={`${trickName} demo`}
-          className="absolute inset-0 h-full w-full object-contain"
-          loading="lazy"
-        />
+        {isProWhooper ? (
+          <a
+            href={proWhooperUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View ${trickName} on Pro Whooper Tricktionary`}
+            className="absolute inset-0 block"
+          >
+            {image}
+          </a>
+        ) : (
+          image
+        )}
       </div>
       <div className="p-3">
         <p className="text-sm font-semibold text-white">{trickName} — Demo</p>
         <p className="mt-0.5 text-xs text-gray-500">
-          Source: Pro Whooper Tricktionary
+          Source:{" "}
+          {isProWhooper ? (
+            <a
+              href={proWhooperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-accent-400)] underline-offset-2 hover:underline"
+            >
+              Pro Whooper Tricktionary
+            </a>
+          ) : (
+            "Pro Whooper Tricktionary"
+          )}
         </p>
       </div>
     </div>
