@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-dynamic";
+
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.fpv-compass.xyz";
 const INTERNAL_API =
@@ -15,7 +17,7 @@ async function fetchTrickSlugs(): Promise<TrickSlug[]> {
   let url: string | null = `${INTERNAL_API}/api/tricks/?is_community=false&page_size=100`;
   try {
     while (url) {
-      const res: Response = await fetch(url, { next: { revalidate: 3600 } });
+      const res: Response = await fetch(url, { cache: "no-store" });
       if (!res.ok) break;
       const data = (await res.json()) as {
         results?: Array<{ slug?: string; updated_at?: string }>;
@@ -52,7 +54,7 @@ interface PostStub {
 async function fetchPostStubs(): Promise<PostStub[]> {
   try {
     const res = await fetch(`${INTERNAL_API}/api/blog/posts/?sort=newest`, {
-      next: { revalidate: 3600 },
+      cache: "no-store",
     });
     if (!res.ok) return [];
     const data = (await res.json()) as Array<{ id?: number; updated_at?: string }>;
