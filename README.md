@@ -56,7 +56,7 @@ Requirements: Docker + Docker Compose.
 
 ```bash
 # Clone
-git clone https://github.com/<you>/fpv-compass.git
+git clone https://github.com/NickNterm/fpv-compass.git
 cd fpv-compass
 
 # Start everything (first run builds images)
@@ -131,4 +131,4 @@ Please open an issue before large changes so we can align on scope.
 
 ## License
 
-TBD.
+Released under the [Apache License 2.0](LICENSE).
